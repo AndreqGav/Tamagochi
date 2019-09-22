@@ -1,7 +1,6 @@
 #include "stdafx.h"
 #include "Cat.h"
 
-
 Cat::Cat() : Creature()
 {
 
@@ -33,6 +32,7 @@ void Cat::Sleep(int time)
 
 void Cat::Play()
 {
+	this->health -= 1;
 	this->happiness += 2;
 	this->power -= 4;
 }

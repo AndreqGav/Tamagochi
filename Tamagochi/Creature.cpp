@@ -1,11 +1,13 @@
 #include "stdafx.h"
 #include "Creature.h"
 
+//TODO: добавить границы для характеристик
+
 Creature::Creature()
 {
-	this->health = 0;
-	this->power = 0;
-	this->happiness = 0;
+	this->health = 1;
+	this->power = 1;
+	this->happiness = 1;
 }
 
 Creature::Creature(int healf, int power, int happiness)

@@ -12,8 +12,10 @@ Creature* SetCreature(int i = 0);
 
 int main()
 {
-	Controller* controller = SetController();
-	Creature* creature = SetCreature();
+	setlocale(LC_ALL, "Russian");
+	// TODO: спрашивать о выборе сначала
+	Controller* controller = SetController(0);
+	Creature* creature = SetCreature(0);
 
 	Game* game = new Game(creature,controller);
 
@@ -38,11 +40,20 @@ Controller* SetController(int i)
 	default:
 		break;
 	}
-	return nullptr;
+	return controller;
 }
 
 Creature* SetCreature(int i) 
 {
-	return nullptr;
+	Creature* creature = nullptr;
+	switch (i)
+	{
+	case 0:
+		creature = new Cat();
+		break;
+	default:
+		break;
+	}
+	return creature;
 }
 
