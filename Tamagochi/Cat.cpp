@@ -39,5 +39,5 @@ void Cat::Play()
 
 void Cat::NextStep()
 {
-
+	// TODO: уменьшение значения характеристик существа
 }

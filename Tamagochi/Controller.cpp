@@ -1,12 +1,4 @@
 #include "stdafx.h"
 #include "Controller.h"
 
-
-Controller::Controller()
-{
-}
-
-
-Controller::~Controller()
-{
-}
+// TODO: удалить этот файл, если не понадобиться

@@ -21,6 +21,30 @@ Game::~Game()
 
 bool Game::NextStep()
 {
-	// Todo: do something
-	return false;
+	if (this->_creature == nullptr || this->_controller == nullptr)
+		return false;
+
+	Action action = this->_controller->GetAction();
+	int value = 0;
+
+	switch (action)
+	{
+	case feed:
+		value = this->_controller->GetValue();
+		this->_creature->Eat(value);
+		break;
+	case play:
+		this->_creature->Play();
+		break;
+	case sleep:
+		value = this->_controller->GetValue();
+		this->_creature->Sleep(value);
+		break;
+	default: // TODO: можно и по-красивее и понятнее сделать
+		return true;
+	}
+
+	this->_creature->NextStep();
+
+	return this->_creature->GetHealth() > 0;
 }

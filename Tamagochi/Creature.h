@@ -16,5 +16,9 @@ public:
 	virtual void Play() = 0;
 	virtual void NextStep() = 0;
 
+	int GetHealth();
+	int GetPower();
+	int GetHappiness();
+
 };
 

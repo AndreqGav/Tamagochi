@@ -18,3 +18,18 @@ Creature::Creature(int healf, int power, int happiness)
 Creature::~Creature()
 {
 }
+
+int Creature::GetHealth()
+{
+	return this->health;
+}
+
+int Creature::GetPower()
+{
+	return this->power;
+}
+
+int Creature::GetHappiness()
+{
+	return this->happiness;
+}
