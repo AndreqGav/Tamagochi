@@ -2,6 +2,7 @@
 
 enum Action
 {
+	none = 0,
 	feed = 1,
 	play =2 ,
 	sleep = 3,

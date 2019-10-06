@@ -25,9 +25,10 @@ void Cat::Eat(int food)
 
 void Cat::Sleep(int time)
 {
-	this->health += time / 2;
-	this->power += time * 2;
-	this->happiness += time;
+	for (int i = 1; i < time; i++)
+	{
+		NextStep();
+	}
 }
 
 void Cat::Play()
